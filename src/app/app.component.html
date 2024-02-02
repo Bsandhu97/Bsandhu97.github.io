@@ -1,0 +1,572 @@
+<html lang="en">
+
+<body>
+  <!-- NavBar -->
+  <nav class="blueBox bg-gradient-to-r from-blue-chill-700 to-blue-chill-500">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="flex flex-1 items-center justify-start sm:items-stretch sm:justify-start">
+          <!-- personal logo slot 
+            <div class="flex flex-shrink-0 items-center">
+          </div> -->
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <div class="profilePicCol">
+                <button data-tooltip-target="tooltip-linkedin" data-tooltip-placement="bottom" type="button" (click)="toLinkedInPage()" class="hover:shadow-2xl hover:contrast-125 hover:scale-105" >
+                  <img class="mt-3 rounded-lg h-11 w-full" src="../assets/linkedinbutton.jpeg" alt="linkedin account">
+                </button>
+                <div id="tooltip-linkedin" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  To Bhagdeep's LinkedIn Page
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+              
+              <div class="profilePicCol">
+                <div class="relative overflow-hidden inline-block transition-transform transform-gpu hover:scale-105">
+                  <button data-tooltip-target="tooltip-github" data-tooltip-placement="bottom" type="button" (click)="toGitHubPage()" class="filter hover:shadow-2xl">
+                    <img class="mt-3 rounded-lg h-11 w-full" src="../assets/github-button.png" alt="github account">
+                  </button>
+                </div>
+                <div id="tooltip-github" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                  To Bhagdeep's Github Account
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div *ngIf="checkNavBar()" class="ms-4 flex justify-start space-x-4 justify-start">
+            <div class="relative inline-block text-left" >
+              <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Social Media Buttons" >
+                <i class="bi bi-list text-2xl"></i>              
+              </button>
+              <mat-menu #menu="matMenu" class="">
+                <button class="mat-menu-item p-0 d-flex align-items-center hover:contrast-125 hover:text-gray-200 hover:bg-gray-500" (click)="toLinkedInPage()">
+                  <img class="ms-3 rounded-md h-11 w-11" src="../assets/317750_linkedin_icon.png" alt="Description of the image">
+                  <span class="text-xl ml-2 me-3">To LinkedIn Page</span>
+                </button>
+                <button class="mat-menu-item p-0 d-flex align-items-center hover:text-gray-200 hover:bg-gray-500" (click)="toGitHubPage()">
+                  <img class="ms-3 rounded-md h-11 w-11" src="../assets/GitHub_transparent.png" alt="Description of the image">
+                  <span class="text-xl ml-2 me-3">To Github Page</span>
+                </button>
+              </mat-menu>
+            </div>
+          </div>
+        </div>
+
+        <!-- contact button -->
+        <div class="flex items-center justify-end">
+          <div>
+            <div class="profilePicCol hover:text-gray-400 hover:scale-105">
+              <button type="button cursor-pointer" (click)="openEmailClient()" >
+                <p class="text-xl font-medium "> Contact Me</p>
+              </button>
+              <!-- Modal / OLD MODAL / GLITCHY -->
+              <!-- <form action="https://formsubmit.co/bhagsandhu2@gmail.com" method="POST">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog text-black">
+                    <div class="modal-content">
+                      <div class="modal-header bg-gradient-to-r from-blue-chill-600 to-blue-chill-400" style="color: aliceblue;">
+                        <h1 class="modal-title fs-5  font-medium" id="exampleModalLabel">Email to Bhagdeep</h1>
+                        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <input type="hidden" name="_subject" value="about me site email">
+                          <p class="font-medium">Email: </p>
+                          <form class="form-floating">
+                            <input id="contactEmail" class="form-control" type="email" name="email" placeholder="Email Address" required>
+                            <label for="floatingInputValue">Input your Email</label>
+                          </form>
+                          <input type="hidden" placeholder="_next" value='http://localhost:4200' required>
+                          <p class="mt-3 font-medium">Message: </p>
+                          <div class="form-floating">
+                            <textarea class="form-control h-100" id="contactMessage" rows="5" maxlength="50" minlength="5" type="text" name="message" required></textarea>
+                            <label for="floatingTextarea2">Message to Bhagdeep...</label>
+                          </div>
+                          <input type="hidden" name="_captcha" value="false">
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" (click)="clearModal()">Clear</button>
+                        <button type="button" type="submit" class="btn" style="background-color: #3A7385; color: aliceblue;" > Submit </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form> -->
+            </div>
+          </div>
+          <div class="ml-4">            
+            <!--column 2 -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Title Card -->
+  <div class="box-container table-container d-grid max-md:h-2/5">
+    <div class="blueBox bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 cardText rounded-b-lg drop-shadow-xl mobile-box ">
+      <div class="container  container-override h-100 w-fit py-3 max-md:mx-0 flex-column ">
+        <div class="row w-full ">
+          <div class="col-md-8 d-flex flex-column">
+            <div class="row d-flex justify-content-center">
+              <div class="col-md-auto">
+                <p class="titleText text-center m-0 pt-4">Hello, I'm Bhagdeep</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="row flex-grow-1">
+              <div class="col-md-auto profilePicCol">
+                <img src="../assets/profile_pic4.jpg" class="drop-shadow-2xl rounded-circle h-64 max-w-fit mt-16 max-md:mt-3" alt="Description of the image">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>           
+  </div>
+
+  <!-- Tabs for mobile -->
+  <div *ngIf="this.mobileScreen" class=" mt-9 max-sm:mt-11">
+    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+      <mat-tab label="Skills">
+        <div class="">
+          <div class="container" >
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  mx-2 py-2 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+              <div class="col-3 p-0 ms-5">
+                <img class="rounded-md skillIconSize ms-4" src="../assets/js.png" alt="Description of the image" >
+              </div>
+              <div class="col-3 ms-2">
+                <p class="text-2xl font-medium text-white">JavaScript</p>
+              </div>
+            </div>
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3  bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+              <div class="col-3 p-0 ms-5">
+                <img class="rounded-md skillIconSize ms-4"  src="../assets/ts.png" alt="Description of the image">
+              </div>
+              <div class="col-3 p-0 d-grid align-items-center">
+                <p class="text-2xl font-medium px-3 text-white">Typescript</p>
+              </div>
+            </div> 
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+              <div class="col-3 p-0 ms-5">
+                <img class="rounded-md skillIconSize ms-4"  src="../assets/angular.png" alt="Description of the image" >
+              </div>
+              <div class="col-3 p-0 d-grid align-items-center">
+                <p class="text-2xl font-medium px-3 text-white">Angular</p>
+              </div>
+            </div>
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+              <div class="col-3 p-0 ms-5">
+                <img class="rounded-md skillIconSize ms-4" src="../assets/REACT.webp" alt="Description of the image">
+              </div>
+              <div class="col-3 p-0 d-grid align-items-center">
+                <p class="text-2xl font-medium px-3 text-white">React</p>
+              </div>
+            </div>
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2   py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+              <div class="col-3 p-0 ms-5">
+                <img class="rounded-md skillIconSize ms-4" src="../assets/vue.js_icon.png" alt="Description of the image">
+              </div>
+              <div class="col-3 p-0 d-grid align-items-center">
+                <p class="text-2xl font-medium px-3 text-white">Vue.JS</p>
+              </div>
+            </div>
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+              <div class="col-3 p-0 ms-5">
+                <img class="rounded-md skillIconSize ms-4" src="../assets/swift-icon.png" alt="Description of the image">
+              </div>
+              <div class="col-3 p-0 d-grid align-items-center">
+                <p class="text-2xl font-medium px-3 text-white">Swift</p>
+              </div>
+            </div>
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+              <div class="col-3 p-0 ms-5">
+                <img class="rounded-md skillIconSize bg-white ms-4" src="../assets/c++ icon.png" alt="Description of the image">
+              </div>
+              <div class="col-3 p-0 d-grid align-items-center">
+                <p class="text-2xl font-medium px-3 text-white">C++</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Experience">
+        <div class="col-md-5 p-auto pe-0" >
+          <div class="container d-grid justify-content-center justify-items-center align-items-center" >
+            <div class="row pt-4 px-3">
+              <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-500 to-blue-chill-300 py-8 rounded-md drop-shadow-xl">              
+                <div class="hover:contrast-125 hover:scale-110">
+                  <button type="button cursor-pointer" (click)="toSyzygy()">
+                    <img class="rounded-md iconSize mb-2" src="../assets/exp_placeholder_2.jpg" alt="Placeholder Icon">
+                  </button>
+                </div>                    
+                <div>
+                  <p class="text-2xl font-medium whitespace-normal overflow-hidden text-center"> Contract Game Developer<br> 
+                    Sygyzy<br>
+                  </p>
+                  <p class="text-xl font-normal mt-2 mx-2 ms-3">
+                    Brought on board to help create and release a gacha style mobile game. 
+                    Worked on primarily the frontend dealing with the map design, characters, UI/UX, damage models, etc.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row pt-4 px-3">
+              <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-500 to-blue-chill-300 py-8 rounded-md drop-shadow-xl">                            
+                <div class="hover:contrast-125 hover:scale-110">
+                  <button type="button cursor-pointer" (click)="toPencil()">
+                    <img class="rounded-md iconSize" src="../assets/Pencil Icon.jpg" alt="Pencil Icon">         
+                  </button>
+                </div>                 <div>
+                  <div class="text-2xl font-medium text-center whitespace-normal overflow-hidden"> Contract Software Engineer<br> 
+                    <div class=" hover:text-gray-500 hover:scale-105">
+                      <button type="button cursor-pointer" (click)="toPencil()">
+                        Pencil Spaces<br>
+                      </button>
+                    </div>
+                  </div>
+                  <p class="text-xl font-normal mt-2 mx-2 ms-3">
+                    Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample SampleSample Sample Sample SampleSample Sample Sample Sample
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="row pt-4 px-3 pb-3">
+              <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-500 to-blue-chill-300 py-8 rounded-md drop-shadow-xl">               
+                <div class="hover:contrast-125 hover:scale-110">
+                  <button type="button cursor-pointer" (click)="toPencil()">
+                    <img class="rounded-md iconSize" src="../assets/Pencil Icon.jpg" alt="Pencil Icon">         
+                  </button>
+                </div>             
+              <div>
+                <div class="text-2xl font-medium whitespace-normal overflow-hidden text-center"> Software Engineer Intern <br>
+                  <div class=" hover:text-gray-500 hover:scale-105">
+                    <button type="button cursor-pointer" (click)="toPencil()">
+                      Pencil Spaces<br>
+                    </button>
+                  </div>
+                </div>
+                <p class="text-xl font-normal mt-2 mx-2 ms-3">
+                  Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample SampleSample Sample Sample SampleSample Sample Sample Sample
+                </p>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <mat-tab label="Education">
+        <div class="container" >
+          <div class="row pt-3 px-3">
+            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-300 to-blue-chill-100 py-8 rounded-md drop-shadow-xl">              
+              <div class=" hover:contrast-125 hover:scale-110">
+                <button type="button cursor-pointer" (click)="toSFSUPage()">
+                  <img class="rounded-md iconSize mb-2" src="../assets/SFSU ICON.jpg" alt="Description of the image"> 
+                </button>
+              </div>                
+              <div class="text-2xl font-medium">
+                <div class="whitespace-normal text-center"> 
+                  <div class=" hover:text-gray-400 hover:scale-105">
+                    <button type="button cursor-pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      <p> Francisco State University<br></p>
+                    </button>
+                  </div>
+                  San Francisco, CA<br>
+                  GPA: 3.86 
+                </div>
+              </div>
+              <div class="text-xl font-normal mt-2 mx-3">
+                On Dean's List five semesters in a row, obtained a term gpa of 4.00 four times in a row. Graduated summa cum laude with a B.S. in Computer Science with a focus on Software Engineering.
+              </div>
+            </div>
+          </div>
+          <div class="row pt-3 px-3">
+            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-300 to-blue-chill-100 py-8 rounded-md drop-shadow-xl">              
+              <div class="hover:contrast-125 hover:scale-110">
+                <button type="button cursor-pointer" (click)="toOSUPage()">
+                  <img class="rounded-md iconSize mb-2" src="../assets//OSU ICON.jpg" alt="Description of the image">
+                </button>
+              </div>                    
+              <div class="text-2xl font-medium ">
+                <div class="whitespace-normal text-center"> 
+                  <div class=" hover:text-gray-400 hover:scale-105">
+                    <button type="button cursor-pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                      Oregon State University<br>
+                    </button>
+                  </div>
+                  Corvallis, OR <br>
+                  GPA: 3.55<br>          
+                </div>
+              </div>
+              <div class="text-xl font-normal mt-2 mx-3">
+                On honor roll for two semesters. Actively partipated in robotics club. Later transfered to San Francisco State University.
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+  </div>
+
+  <!-- Desktop Skills / Education / Experiance -->
+  <div *ngIf="!this.mobileScreen" name="pageContent" class="container w-auto pt-3" >
+    <div class="row pb-3">
+      <div class="col-md-3 px-3 p-auto pe-0">
+        <div class="container" >
+          <div class=" d-flex justify-content-center justify-items-center align-items-center">
+            <div class="row d-flex rowCenter mb-2">
+              <div class="col-md-2 p-0 d-grid justify-content-center justify-items-center align-items-center">
+                <i class="text-4xl sectionIcons bi bi-clipboard2-data me-2"></i>    
+              </div>
+              <div class="col-md-8 p-0 ">
+                <p class="text-4xl sectionTitles text-black ms-2">Skills</p>
+              </div>
+            </div>
+          </div>
+          <div class="row rowCenter my-3 py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="col-md-4 p-0">
+              <img class="rounded-md skillIconSize ms-4" src="../assets/js.png" alt="Description of the image" >
+            </div>
+            <div class="col-md-auto p-0 d-grid align-items-center">
+              <p class="text-2xl font-medium px-3 text-white">JavaScript</p>
+            </div>
+          </div>
+          <div class="row rowCenter my-3 py-3  bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="col-md-4 p-0">
+              <img class="rounded-md skillIconSize ms-4"  src="../assets/ts.png" alt="Description of the image">
+            </div>
+            <div class="col-md-auto p-0 d-grid align-items-center">
+              <p class="text-2xl font-medium px-3 text-white">Typescript</p>
+            </div>
+          </div> 
+          <div class="row rowCenter my-3 py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="col-md-4 p-0">
+              <img class="rounded-md skillIconSize ms-4"  src="../assets/angular.png" alt="Description of the image" >
+            </div>
+            <div class="col-md-auto p-0 d-grid align-items-center">
+              <p class="text-2xl font-medium px-3 text-white">Angular</p>
+            </div>
+          </div>
+          <div class="row rowCenter my-3 py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="col-md-4 p-0 ">
+              <img class="rounded-md skillIconSize ms-4" src="../assets/REACT.webp" alt="Description of the image">
+            </div>
+            <div class="col-md-auto p-0 d-grid align-items-center">
+              <p class="text-2xl font-medium px-3 text-white">React</p>
+            </div>
+          </div>
+          <div class="row rowCenter my-3  py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="col-md-4 p-0">
+              <img class="rounded-md skillIconSize ms-4" src="../assets/vue.js_icon.png" alt="Description of the image">
+            </div>
+            <div class="col-md-auto p-0 d-grid align-items-center">
+              <p class="text-2xl font-medium px-3 text-white">Vue.JS</p>
+            </div>
+          </div>
+          <div class="row rowCenter my-3 py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="col-md-4 p-0">
+              <img class="rounded-md skillIconSize ms-4" src="../assets/swift-icon.png" alt="Description of the image">
+            </div>
+            <div class="col-md-auto p-0 d-grid align-items-center">
+              <p class="text-2xl font-medium px-3 text-white">Swift</p>
+            </div>
+          </div>
+          <div class="row rowCenter my-3 py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="col-md-4 p-0">
+              <img class="rounded-md skillIconSize bg-white ms-4" src="../assets/c++ icon.png" alt="Description of the image">
+            </div>
+            <div class="col-md-auto p-0 d-grid align-items-center">
+              <p class="text-2xl font-medium px-3 text-white">C++</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Experience -->
+      <div class="col-md-5 px-3 p-auto pe-0" >
+        <div class="container d-grid justify-content-center justify-items-center align-items-center" >
+          <div class="row d-flex rowCenter">
+            <div class="col-md-2 p-0" >
+              <i class="text-4xl sectionIcons bi bi-briefcase me-2"></i>  
+            </div>
+            <div class="col-md-8 p-0">
+              <p class="text-4xl sectionTitles ms-2">Experience</p>
+            </div>
+          </div>
+          <div class="row pt-4">
+            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-500 to-blue-chill-300 py-8 rounded-md drop-shadow-xl">              
+              <div class="hover:contrast-125 hover:scale-110">
+                <button data-tooltip-target="tooltip-syzygy" data-tooltip-placement="top" type="button cursor-pointer" (click)="toSyzygy()">
+                  <img class="rounded-md iconSize mb-2" src="../assets/exp_placeholder_2.jpg" alt="Placeholder Icon">
+                </button>
+              </div>       
+              <div id="tooltip-syzygy" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Additonal information about Syzygy
+                <div class="tooltip-arrow" data-popper-arrow> </div>
+              </div>       
+              <div>
+                <div class="text-2xl font-medium whitespace-normal overflow-hidden text-center"> Contract Game Developer<br> 
+                  <div class=" hover:text-gray-500 hover:scale-105">
+                    <button type="button cursor-pointer" (click)="toSyzygy()">
+                      Syzygy Labs Research<br>
+                    </button>
+                  </div>
+                </div>
+                <p class="text-xl font-normal mt-2 mx-2 ms-3">
+                  Brought on board to help create and release a gacha style mobile game. 
+                  Worked on primarily the frontend dealing with the map design, characters, UI/UX, damage models, etc.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-4">
+            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-500 to-blue-chill-300 py-8 rounded-md drop-shadow-xl">                            
+              <div class="hover:contrast-125 hover:scale-110">
+                <button data-tooltip-target="tooltip-pencil-1" data-tooltip-placement="top" type="button cursor-pointer" (click)="toPencil()">
+                  <img class="rounded-md iconSize" src="../assets/Pencil Icon.jpg" alt="Pencil Icon">         
+                </button>
+              </div> 
+              <div id="tooltip-pencil-1" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Additonal information about Pencil Spaces
+                <div class="tooltip-arrow" data-popper-arrow> </div>
+              </div>             
+              <div>
+                <div class="text-2xl font-medium text-center whitespace-normal overflow-hidden"> Contract Software Engineer<br> 
+                  <div class=" hover:text-gray-500 hover:scale-105">
+                    <button type="button cursor-pointer" (click)="toPencil()">
+                      Pencil Spaces<br>
+                    </button>
+                  </div>
+                </div>
+                <p class="text-xl font-normal mt-2 mx-2 ms-3">
+                  Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample SampleSample Sample Sample SampleSample Sample Sample Sample
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-4">
+            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-500 to-blue-chill-300 py-8 rounded-md drop-shadow-xl">               
+              <div class="hover:contrast-125 hover:scale-110">
+                <button data-tooltip-target="tooltip-pencil-2" data-tooltip-placement="top" type="button cursor-pointer" (click)="toPencil()">
+                  <img class="rounded-md iconSize" src="../assets/Pencil Icon.jpg" alt="Pencil Icon">         
+                </button>
+              </div>
+              <div id="tooltip-pencil-2" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                Additonal information about Pencil Spaces
+                <div class="tooltip-arrow" data-popper-arrow> </div>
+              </div>  
+            <div>
+              <div class="text-2xl font-medium whitespace-normal overflow-hidden text-center"> Software Engineer Intern <br>
+                <div class=" hover:text-gray-500 hover:scale-105">
+                  <button type="button cursor-pointer" (click)="toPencil()">
+                    Pencil Spaces<br>
+                  </button>
+                </div>
+              </div>
+              <p class="text-xl font-normal mt-2 mx-2 ms-3">
+                Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample SampleSample Sample Sample SampleSample Sample Sample Sample
+              </p>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       <!-- Education -->
+       <div class="col-md-4 px-3 p-auto pe-0" >
+        <div class="container" >
+          <div class=" d-flex justify-content-center justify-items-center align-items-center">
+            <div class="row rowCenter">
+              <div class="col-md-2 p-0">
+                <i class="text-4xl sectionIcons bi bi-book me-2"></i>
+              </div>
+              <div class="col-md-8 p-0">
+                <p class="text-4xl sectionTitles ms-2" style="color: black;">Education</p>
+              </div>
+            </div>
+          </div>
+          <div class="row pt-4">
+            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-300 to-blue-chill-100 py-8 rounded-md drop-shadow-xl">              
+              <div class=" hover:contrast-125 hover:scale-110">
+                <button data-tooltip-target="tooltip-sfsu" data-tooltip-placement="top" type="button cursor-pointer" (click)="toSFSUPage()">
+                  <img class="rounded-md iconSize mb-2" src="../assets/SFSU ICON.jpg" alt="Description of the image"> 
+                </button>
+              </div>  
+              <div id="tooltip-sfsu" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                More Information about SFSU
+                <div class="tooltip-arrow" data-popper-arrow> 
+              </div>
+              </div>
+            <div class="text-2xl font-medium">
+              <div class="whitespace-normal text-center"> 
+                <div class=" hover:text-gray-500 hover:scale-105">
+                  <button type="button cursor-pointer" (click)="toSFSUPage()">
+                    <p>San Francisco State University<br></p>
+                  </button>
+                </div>
+                San Francisco, CA<br>
+                GPA: 3.86 
+              </div>
+            </div>
+            <div class="text-xl font-normal mt-2 mx-3">
+              On Dean's List five semesters in a row, obtained a term gpa of 4.00 four times in a row. Graduated summa cum laude with a B.S. in Computer Science with a focus on Software Engineering.
+            </div>
+            </div>
+          </div>
+          <div class="row pt-4">
+            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-300 to-blue-chill-100 py-8 rounded-md drop-shadow-xl">              
+              <div class="hover:contrast-125 hover:scale-110">
+                <button data-tooltip-target="tooltip-osu" data-tooltip-placement="top" type="button cursor-pointer" (click)="toOSUPage()">
+                  <img class="rounded-md iconSize mb-2" src="../assets//OSU ICON.jpg" alt="Description of the image">
+                </button>
+              </div>
+              <div id="tooltip-osu" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                More Information about OSU
+                <div class="tooltip-arrow" data-popper-arrow> </div>
+              </div>         
+              <div class="text-2xl font-medium ">
+                <div class="whitespace-normal text-center"> 
+                  <div class=" hover:text-gray-500 hover:scale-105">
+                    <button type="button cursor-pointer" (click)="toOSUPage()">
+                      Oregon State University<br>
+                    </button>
+                  </div>
+                  Corvallis, OR <br>
+                  GPA: 3.55<br>          
+                </div>
+              </div>
+              <div class="text-xl font-normal mt-2 mx-3">
+                On honor roll for two semesters. Actively partipated in robotics club. Later transfered to San Francisco State University.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Footer -->
+  
+
+<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 BhagdeepSandhu™ All Rights Reserved.
+  </span>
+  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+      <li>
+          <button class="hover:underline" (click)="openEmailClient()">Contact</button>
+      </li>
+  </ul>
+  </div>
+</footer>
+
+<div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+<router-outlet></router-outlet>
