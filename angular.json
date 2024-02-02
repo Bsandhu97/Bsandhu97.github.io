@@ -103,6 +103,9 @@
               "node_modules/@material-tailwind/html/scripts/ripple.js"
             ]
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
