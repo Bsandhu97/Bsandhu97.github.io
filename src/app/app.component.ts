@@ -5,7 +5,7 @@ import { initFlowbite } from 'flowbite';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements AfterViewInit, OnInit {
   title = 'Bhagswebsite';
   mobileScreen: boolean = false;
   activeTab = 'skills';
@@ -47,7 +47,7 @@ export class AppComponent implements AfterViewInit {
 
   checkWindowSize() {
     this.activeScreenSize = window.innerWidth;
-    this.mobileScreen = this.activeScreenSize < 800 ? true : false;
+    this.mobileScreen = this.activeScreenSize < 800;
   }
 
   checkMobileScreen(): boolean {

@@ -6,9 +6,9 @@
     <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
       <div class="relative flex h-16 items-center justify-between">
         <div class="flex flex-1 items-center justify-start sm:items-stretch sm:justify-start">
-          <!-- personal logo slot 
-            <div class="flex flex-shrink-0 items-center">
-          </div> -->
+          <div class="hidden sm:ml-6 sm:block">
+            <img class="mt-2 h-16 w-full" src="../assets/bhagdeep-sandhu-high-resolution-logo-transparent.png" alt="linkedin account">
+          </div>
           <div class="hidden sm:ml-6 sm:block">
             <div class="flex space-x-4">
               <div class="profilePicCol">
@@ -20,7 +20,6 @@
                   <div class="tooltip-arrow" data-popper-arrow></div>
                 </div>
               </div>
-              
               <div class="profilePicCol">
                 <div class="relative overflow-hidden inline-block transition-transform transform-gpu hover:scale-105">
                   <button data-tooltip-target="tooltip-github" data-tooltip-placement="bottom" type="button" (click)="toGitHubPage()" class="filter hover:shadow-2xl">
@@ -52,7 +51,6 @@
             </div>
           </div>
         </div>
-
         <!-- contact button -->
         <div class="flex items-center justify-end">
           <div>
@@ -60,42 +58,7 @@
               <button type="button cursor-pointer" (click)="openEmailClient()" >
                 <p class="text-xl font-medium "> Contact Me</p>
               </button>
-              <!-- Modal / OLD MODAL / GLITCHY -->
-              <!-- <form action="https://formsubmit.co/bhagsandhu2@gmail.com" method="POST">
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog text-black">
-                    <div class="modal-content">
-                      <div class="modal-header bg-gradient-to-r from-blue-chill-600 to-blue-chill-400" style="color: aliceblue;">
-                        <h1 class="modal-title fs-5  font-medium" id="exampleModalLabel">Email to Bhagdeep</h1>
-                        <button type="button" class="btn-close " data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                          <input type="hidden" name="_subject" value="about me site email">
-                          <p class="font-medium">Email: </p>
-                          <form class="form-floating">
-                            <input id="contactEmail" class="form-control" type="email" name="email" placeholder="Email Address" required>
-                            <label for="floatingInputValue">Input your Email</label>
-                          </form>
-                          <input type="hidden" placeholder="_next" value='http://localhost:4200' required>
-                          <p class="mt-3 font-medium">Message: </p>
-                          <div class="form-floating">
-                            <textarea class="form-control h-100" id="contactMessage" rows="5" maxlength="50" minlength="5" type="text" name="message" required></textarea>
-                            <label for="floatingTextarea2">Message to Bhagdeep...</label>
-                          </div>
-                          <input type="hidden" name="_captcha" value="false">
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" (click)="clearModal()">Clear</button>
-                        <button type="button" type="submit" class="btn" style="background-color: #3A7385; color: aliceblue;" > Submit </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form> -->
             </div>
-          </div>
-          <div class="ml-4">            
-            <!--column 2 -->
           </div>
         </div>
       </div>
@@ -132,59 +95,75 @@
       <mat-tab label="Skills">
         <div class="">
           <div class="container" >
-            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  mx-2 py-2 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  mx-2 py-2 bg-blue-chill-600 py-8 rounded-md drop-shadow-xl">
               <div class="col-3 p-0 ms-5">
                 <img class="rounded-md skillIconSize ms-4" src="../assets/js.png" alt="Description of the image" >
               </div>
-              <div class="col-3 ms-2">
+              <div class="col-5 ms-2">
                 <p class="text-2xl font-medium text-white">JavaScript</p>
               </div>
             </div>
-            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3  bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3  bg-blue-chill-600 py-8 rounded-md drop-shadow-xl">
               <div class="col-3 p-0 ms-5">
                 <img class="rounded-md skillIconSize ms-4"  src="../assets/ts.png" alt="Description of the image">
               </div>
-              <div class="col-3 p-0 d-grid align-items-center">
+              <div class="col-5 p-0 d-grid align-items-center">
                 <p class="text-2xl font-medium px-3 text-white">Typescript</p>
               </div>
             </div> 
-            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-blue-chill-600 py-8 rounded-md drop-shadow-xl">
               <div class="col-3 p-0 ms-5">
                 <img class="rounded-md skillIconSize ms-4"  src="../assets/angular.png" alt="Description of the image" >
               </div>
-              <div class="col-3 p-0 d-grid align-items-center">
+              <div class="col-5 p-0 d-grid align-items-center">
                 <p class="text-2xl font-medium px-3 text-white">Angular</p>
               </div>
             </div>
-            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-blue-chill-600 py-8 rounded-md drop-shadow-xl">
               <div class="col-3 p-0 ms-5">
                 <img class="rounded-md skillIconSize ms-4" src="../assets/REACT.webp" alt="Description of the image">
               </div>
-              <div class="col-3 p-0 d-grid align-items-center">
+              <div class="col-5 p-0 d-grid align-items-center">
                 <p class="text-2xl font-medium px-3 text-white">React</p>
               </div>
             </div>
-            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2   py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-blue-chill-600 py-8 rounded-md drop-shadow-xl">
               <div class="col-3 p-0 ms-5">
-                <img class="rounded-md skillIconSize ms-4" src="../assets/vue.js_icon.png" alt="Description of the image">
+                <img class="rounded-md skillIconSize ms-4" src="../assets/mysql-icon.png" alt="Description of the image">
               </div>
-              <div class="col-3 p-0 d-grid align-items-center">
-                <p class="text-2xl font-medium px-3 text-white">Vue.JS</p>
+              <div class="col-5 p-0 d-grid align-items-center">
+                <p class="text-2xl font-medium px-3 text-white">MySQL</p>
               </div>
             </div>
-            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="row justify-content-start rowCenter my-3 mx-2  py-3 bg-blue-chill-600 py-8 rounded-md drop-shadow-xl">
+              <div class="col-3 p-0 ms-5">
+                <img class="rounded-md skillIconSize ms-4" src="../assets/android-icon.png" alt="Description of the image">
+              </div>
+              <div class="col-5 p-0 d-grid align-items-center">
+                <p class="text-2xl font-medium px-3 text-white">Android SDK</p>
+              </div>
+            </div>
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-blue-chill-600 py-8 rounded-md drop-shadow-xl">
               <div class="col-3 p-0 ms-5">
                 <img class="rounded-md skillIconSize ms-4" src="../assets/swift-icon.png" alt="Description of the image">
               </div>
-              <div class="col-3 p-0 d-grid align-items-center">
+              <div class="col-5 p-0 d-grid align-items-center">
                 <p class="text-2xl font-medium px-3 text-white">Swift</p>
               </div>
             </div>
-            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2   py-3 bg-blue-chill-600 py-8 rounded-md drop-shadow-xl">
+              <div class="col-3 p-0 ms-5">
+                <img class="rounded-md skillIconSize ms-4" src="../assets/vue.js_icon.png" alt="Description of the image">
+              </div>
+              <div class="col-5 p-0 d-grid align-items-center">
+                <p class="text-2xl font-medium px-3 text-white">Vue.JS</p>
+              </div>
+            </div>
+            <div class="row align-items-center justify-content-start rowCenter my-3 mx-2  py-3 bg-blue-chill-600 py-8 rounded-md drop-shadow-xl">
               <div class="col-3 p-0 ms-5">
                 <img class="rounded-md skillIconSize bg-white ms-4" src="../assets/c++ icon.png" alt="Description of the image">
               </div>
-              <div class="col-3 p-0 d-grid align-items-center">
+              <div class="col-5 p-0 d-grid align-items-center">
                 <p class="text-2xl font-medium px-3 text-white">C++</p>
               </div>
             </div>
@@ -195,7 +174,7 @@
         <div class="col-md-5 p-auto pe-0" >
           <div class="container d-grid justify-content-center justify-items-center align-items-center" >
             <div class="row pt-4 px-3">
-              <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-500 to-blue-chill-300 py-8 rounded-md drop-shadow-xl">              
+              <div class="flex flex-col d-grid justify-items-center bg-blue-chill-400 py-8 rounded-md drop-shadow-xl">              
                 <div class="hover:contrast-125 hover:scale-110">
                   <button type="button cursor-pointer" (click)="toSyzygy()">
                     <img class="rounded-md iconSize mb-2" src="../assets/exp_placeholder_2.jpg" alt="Placeholder Icon">
@@ -213,7 +192,7 @@
               </div>
             </div>
             <div class="row pt-4 px-3">
-              <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-500 to-blue-chill-300 py-8 rounded-md drop-shadow-xl">                            
+              <div class="flex flex-col d-grid justify-items-center bg-blue-chill-400 py-8 rounded-md drop-shadow-xl">                            
                 <div class="hover:contrast-125 hover:scale-110">
                   <button type="button cursor-pointer" (click)="toPencil()">
                     <img class="rounded-md iconSize" src="../assets/Pencil Icon.jpg" alt="Pencil Icon">         
@@ -233,7 +212,7 @@
               </div>
             </div>
             <div class="row pt-4 px-3 pb-3">
-              <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-500 to-blue-chill-300 py-8 rounded-md drop-shadow-xl">               
+              <div class="flex flex-col d-grid justify-items-center bg-blue-chill-400 py-8 rounded-md drop-shadow-xl">               
                 <div class="hover:contrast-125 hover:scale-110">
                   <button type="button cursor-pointer" (click)="toPencil()">
                     <img class="rounded-md iconSize" src="../assets/Pencil Icon.jpg" alt="Pencil Icon">         
@@ -259,7 +238,7 @@
       <mat-tab label="Education">
         <div class="container" >
           <div class="row pt-3 px-3">
-            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-300 to-blue-chill-100 py-8 rounded-md drop-shadow-xl">              
+            <div class="flex flex-col d-grid justify-items-center bg-blue-chill-200 py-8 rounded-md drop-shadow-xl">              
               <div class=" hover:contrast-125 hover:scale-110">
                 <button type="button cursor-pointer" (click)="toSFSUPage()">
                   <img class="rounded-md iconSize mb-2" src="../assets/SFSU ICON.jpg" alt="Description of the image"> 
@@ -282,7 +261,7 @@
             </div>
           </div>
           <div class="row pt-3 px-3">
-            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-300 to-blue-chill-100 py-8 rounded-md drop-shadow-xl">              
+            <div class="flex flex-col d-grid justify-items-center bg-blue-chill-200 py-8 rounded-md drop-shadow-xl">              
               <div class="hover:contrast-125 hover:scale-110">
                 <button type="button cursor-pointer" (click)="toOSUPage()">
                   <img class="rounded-md iconSize mb-2" src="../assets//OSU ICON.jpg" alt="Description of the image">
@@ -300,7 +279,7 @@
                 </div>
               </div>
               <div class="text-xl font-normal mt-2 mx-3">
-                On honor roll for two semesters. Actively partipated in robotics club. Later transfered to San Francisco State University.
+                On honor roll for two quarters. Actively partipated in robotics club. Later transfered to San Francisco State University.
               </div>
             </div>
           </div>
@@ -308,7 +287,6 @@
       </mat-tab>
     </mat-tab-group>
   </div>
-
   <!-- Desktop Skills / Education / Experiance -->
   <div *ngIf="!this.mobileScreen" name="pageContent" class="container w-auto pt-3" >
     <div class="row pb-3">
@@ -324,65 +302,80 @@
               </div>
             </div>
           </div>
-          <div class="row rowCenter my-3 py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+          <div class="row rowCenter my-3 py-3 bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">
             <div class="col-md-4 p-0">
               <img class="rounded-md skillIconSize ms-4" src="../assets/js.png" alt="Description of the image" >
             </div>
             <div class="col-md-auto p-0 d-grid align-items-center">
-              <p class="text-2xl font-medium px-3 text-white">JavaScript</p>
+              <p class="text-2xl font-semibold px-3 text-black">JavaScript</p>
             </div>
           </div>
-          <div class="row rowCenter my-3 py-3  bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+          <div class="row rowCenter my-3 py-3  bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">
             <div class="col-md-4 p-0">
               <img class="rounded-md skillIconSize ms-4"  src="../assets/ts.png" alt="Description of the image">
             </div>
             <div class="col-md-auto p-0 d-grid align-items-center">
-              <p class="text-2xl font-medium px-3 text-white">Typescript</p>
+              <p class="text-2xl font-semibold px-3 text-black">Typescript</p>
             </div>
           </div> 
-          <div class="row rowCenter my-3 py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+          <div class="row rowCenter my-3 py-3 bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">
             <div class="col-md-4 p-0">
               <img class="rounded-md skillIconSize ms-4"  src="../assets/angular.png" alt="Description of the image" >
             </div>
             <div class="col-md-auto p-0 d-grid align-items-center">
-              <p class="text-2xl font-medium px-3 text-white">Angular</p>
+              <p class="text-2xl font-semibold px-3 text-black">Angular</p>
             </div>
           </div>
-          <div class="row rowCenter my-3 py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+          <div class="row rowCenter my-3 py-3 bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">
             <div class="col-md-4 p-0 ">
               <img class="rounded-md skillIconSize ms-4" src="../assets/REACT.webp" alt="Description of the image">
             </div>
             <div class="col-md-auto p-0 d-grid align-items-center">
-              <p class="text-2xl font-medium px-3 text-white">React</p>
+              <p class="text-2xl font-semibold px-3 text-black">React</p>
             </div>
           </div>
-          <div class="row rowCenter my-3  py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+          <div class="row rowCenter my-3 py-3 bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">
             <div class="col-md-4 p-0">
-              <img class="rounded-md skillIconSize ms-4" src="../assets/vue.js_icon.png" alt="Description of the image">
+              <img class="rounded-md skillIconSize ms-4" src="../assets/mysql-icon.png" alt="Description of the image">
             </div>
             <div class="col-md-auto p-0 d-grid align-items-center">
-              <p class="text-2xl font-medium px-3 text-white">Vue.JS</p>
+              <p class="text-2xl font-semibold px-3 text-black">MySQL</p>
             </div>
           </div>
-          <div class="row rowCenter my-3 py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+          <div class="row rowCenter my-3 py-3 bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">
+            <div class="col-md-4 p-0">
+              <img class="rounded-md skillIconSize ms-4" src="../assets/android-icon.png" alt="Description of the image">
+            </div>
+            <div class="col-md-auto p-0 d-grid align-items-center">
+              <p class="text-2xl font-semibold px-3 text-black">Android SDK</p>
+            </div>
+          </div>
+          <div class="row rowCenter my-3 py-3 bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">
             <div class="col-md-4 p-0">
               <img class="rounded-md skillIconSize ms-4" src="../assets/swift-icon.png" alt="Description of the image">
             </div>
             <div class="col-md-auto p-0 d-grid align-items-center">
-              <p class="text-2xl font-medium px-3 text-white">Swift</p>
+              <p class="text-2xl font-semibold px-3 text-black">Swift</p>
             </div>
           </div>
-          <div class="row rowCenter my-3 py-3 bg-gradient-to-r from-blue-chill-700 to-blue-chill-500 py-8 rounded-md drop-shadow-xl">
+          <div class="row rowCenter my-3  py-3 bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">
+            <div class="col-md-4 p-0">
+              <img class="rounded-md skillIconSize ms-4" src="../assets/vue.js_icon.png" alt="Description of the image">
+            </div>
+            <div class="col-md-auto p-0 d-grid align-items-center">
+              <p class="text-2xl font-semibold px-3 text-black">Vue.JS</p>
+            </div>
+          </div>
+          <div class="row rowCenter my-3 py-3 bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">
             <div class="col-md-4 p-0">
               <img class="rounded-md skillIconSize bg-white ms-4" src="../assets/c++ icon.png" alt="Description of the image">
             </div>
             <div class="col-md-auto p-0 d-grid align-items-center">
-              <p class="text-2xl font-medium px-3 text-white">C++</p>
+              <p class="text-2xl font-semibold px-3 text-black">C++</p>
             </div>
           </div>
         </div>
       </div>
-
       <!-- Experience -->
       <div class="col-md-5 px-3 p-auto pe-0" >
         <div class="container d-grid justify-content-center justify-items-center align-items-center" >
@@ -394,8 +387,8 @@
               <p class="text-4xl sectionTitles ms-2">Experience</p>
             </div>
           </div>
-          <div class="row pt-4">
-            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-500 to-blue-chill-300 py-8 rounded-md drop-shadow-xl">              
+          <div class="row pt-3">
+            <div class="flex flex-col d-grid justify-items-center bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">              
               <div class="hover:contrast-125 hover:scale-110">
                 <button data-tooltip-target="tooltip-syzygy" data-tooltip-placement="top" type="button cursor-pointer" (click)="toSyzygy()">
                   <img class="rounded-md iconSize mb-2" src="../assets/exp_placeholder_2.jpg" alt="Placeholder Icon">
@@ -414,14 +407,15 @@
                   </div>
                 </div>
                 <p class="text-xl font-normal mt-2 mx-2 ms-3">
-                  Brought on board to help create and release a gacha style mobile game. 
-                  Worked on primarily the frontend dealing with the map design, characters, UI/UX, damage models, etc.
+                  Developed maps, characters, UI/UX, damage models for a gacha style mobile game.
+                  Worked primarily on the frontend in a team of three developers, using Unity and C#.
+                  Learned more about <b>Unity's</b> functionality and <b>C#</b>  in the process.
                 </p>
               </div>
             </div>
           </div>
-          <div class="row pt-4">
-            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-500 to-blue-chill-300 py-8 rounded-md drop-shadow-xl">                            
+          <div class="row pt-3">
+            <div class="flex flex-col d-grid justify-items-center bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">                            
               <div class="hover:contrast-125 hover:scale-110">
                 <button data-tooltip-target="tooltip-pencil-1" data-tooltip-placement="top" type="button cursor-pointer" (click)="toPencil()">
                   <img class="rounded-md iconSize" src="../assets/Pencil Icon.jpg" alt="Pencil Icon">         
@@ -440,13 +434,19 @@
                   </div>
                 </div>
                 <p class="text-xl font-normal mt-2 mx-2 ms-3">
-                  Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample SampleSample Sample Sample SampleSample Sample Sample Sample
+                  Was kept onboard from my internship to work on solo projects. 
+                  Projects which objectives range from increasing relability to adding new features such as productivity apps.
+                  Continued working on tickets and bug fixes with my team of 5 for the main product.
+                  Learned more about the software development lifecycle and the importance of communication.
+                  Especially when it came to solo projects, in which time managment and communication with my technical lead developer 
+                  was key to getting the end product to meet the requirements given.
+                  During my time here i learned and expanded my knowledge in the tools <b> Jira, Bitbucket, Visual Studio Code, Slack, Typescript, Angular, and Android SDK</b>
                 </p>
               </div>
             </div>
           </div>
-          <div class="row pt-4">
-            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-500 to-blue-chill-300 py-8 rounded-md drop-shadow-xl">               
+          <div class="row pt-3">
+            <div class="flex flex-col d-grid justify-items-center bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">               
               <div class="hover:contrast-125 hover:scale-110">
                 <button data-tooltip-target="tooltip-pencil-2" data-tooltip-placement="top" type="button cursor-pointer" (click)="toPencil()">
                   <img class="rounded-md iconSize" src="../assets/Pencil Icon.jpg" alt="Pencil Icon">         
@@ -465,14 +465,16 @@
                 </div>
               </div>
               <p class="text-xl font-normal mt-2 mx-2 ms-3">
-                Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample Sample SampleSample Sample Sample SampleSample Sample Sample Sample
+                Interned at Pencil Spaces for 3 months, during this time here i learned about the software development
+                I primiarly worked on tickets and bug fixes with my team of 5 for the main website product.
+                Over time i was given more complicated tasks such as adding new features, creating whole new pages, 
+                and helping develop the mobile app version of the website.
               </p>
             </div>
             </div>
           </div>
         </div>
       </div>
-
        <!-- Education -->
        <div class="col-md-4 px-3 p-auto pe-0" >
         <div class="container" >
@@ -486,8 +488,8 @@
               </div>
             </div>
           </div>
-          <div class="row pt-4">
-            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-300 to-blue-chill-100 py-8 rounded-md drop-shadow-xl">              
+          <div class="row pt-3">
+            <div class="flex flex-col d-grid justify-items-center bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">              
               <div class=" hover:contrast-125 hover:scale-110">
                 <button data-tooltip-target="tooltip-sfsu" data-tooltip-placement="top" type="button cursor-pointer" (click)="toSFSUPage()">
                   <img class="rounded-md iconSize mb-2" src="../assets/SFSU ICON.jpg" alt="Description of the image"> 
@@ -514,8 +516,8 @@
             </div>
             </div>
           </div>
-          <div class="row pt-4">
-            <div class="flex flex-col d-grid justify-items-center bg-gradient-to-r from-blue-chill-300 to-blue-chill-100 py-8 rounded-md drop-shadow-xl">              
+          <div class="row pt-3">
+            <div class="flex flex-col d-grid justify-items-center bg-blue-chill-300 py-8 rounded-md drop-shadow-xl">              
               <div class="hover:contrast-125 hover:scale-110">
                 <button data-tooltip-target="tooltip-osu" data-tooltip-placement="top" type="button cursor-pointer" (click)="toOSUPage()">
                   <img class="rounded-md iconSize mb-2" src="../assets//OSU ICON.jpg" alt="Description of the image">
@@ -537,7 +539,7 @@
                 </div>
               </div>
               <div class="text-xl font-normal mt-2 mx-3">
-                On honor roll for two semesters. Actively partipated in robotics club. Later transfered to San Francisco State University.
+                On honor roll for two quarters. Actively partipated in robotics club. Later transfered to San Francisco State University.
               </div>
             </div>
           </div>
@@ -545,24 +547,18 @@
       </div>
     </div>
   </div>
-<!-- Footer -->
-  
-
-<footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
-  <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
-    <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 BhagdeepSandhu™ All Rights Reserved.
-  </span>
-  <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-      <li>
-          <button class="hover:underline" (click)="openEmailClient()">Contact</button>
-      </li>
-  </ul>
-  </div>
-</footer>
-
-<div>
-</div>
-
+  <!-- Footer -->
+  <footer class="bg-white rounded-lg shadow m-4 dark:bg-gray-800">
+    <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
+      <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 BhagdeepSandhu™ All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+        <li>
+            <button class="hover:underline" (click)="openEmailClient()">Contact</button>
+        </li>
+    </ul>
+    </div>
+  </footer>
 </body>
 </html>
 <router-outlet></router-outlet>
