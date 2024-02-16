@@ -90,6 +90,9 @@ export class AppComponent implements AfterViewInit, OnInit {
   toPencil(){
     window.open("https://www.pencilspaces.com/");
   }
+  toTheCoderSchool(){
+    window.open("https://www.thecoderschool.com/");
+  }
 
   clearModal(): void {
     const contactMessage = document.getElementById('contactMessage') as HTMLInputElement;
